@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .mid{
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .e{
+      display: block;
+      width: 300px;
+      margin: 10px auto;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #3a0505;
+      border-radius: 50px;
+    }
+    .p{
+      display: block;
+      width: 300px;
+      margin: 10px auto;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #3a0505;
+      border-radius: 50px;
+    }
+    .cp{
+      display: block;
+      width: 300px;
+      margin: 10px auto;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #3a0505;
+      border-radius: 50px;
+    }
+    .submit {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: rgba(46, 15, 46, 0.911);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit:hover {
+      background-color: #c615d683;
+    }
+    body{
+      background-image: url('bg2 (2).jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .i{
+      border-radius: 100px;
+    }
+    .s a{
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="mid">
+    <form action="secondpage.html" method="post" id="myForm">
+      <p><img src="bg3 (1).png" alt="" class="i"></p>
+      <input type="email" placeholder="E-MAIL" class="e" required><br>
+      <input type="password" placeholder="PASSWORD" class="p" required><br>
+      <input type="password" placeholder="CONFIRM PASSWORD" class="cp" required>
+      <button type="submit" class="submit">Submit</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var email = document.querySelector('.e').value;
+      var password = document.querySelector('.p').value;
+      var confirmPassword = document.querySelector('.cp').value;
+      
+      if (email === '' || password === '' || confirmPassword === '') {
+        alert('Please fill in all fields!');
+      } else if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+      } else {
+        alert('Login Successfully');
+        window.location.href = 'thirdpage.html';
+      }
+    });
+  </script>
+</body>
+</html>
+

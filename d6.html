@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - Fashion Chingu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+    }
+
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Scrollable Product Images Section */
+    .product {
+      width: 40%; /* Set the width of the image container */
+      position: relative;
+      display: flex;
+      gap: 15px; /* Adds space between images */
+    }
+
+    .product img {
+      height: auto;
+      max-width: 100%; /* Ensures images scale down with the container width */
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    /* Navigation Arrows */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      color: #333;
+      background-color: rgba(255, 255, 255, 0.7);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .arrow-left {
+      left: 10px;
+    }
+
+    .arrow-right {
+      right: 10px;
+    }
+
+    .product-info {
+      width: 55%; /* Controls the width of the product info */
+      padding-left: 20px;
+    }
+
+    .product-info h1 {
+      font-size: 32px;
+      color: #333;
+    }
+
+    .product-info ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .product-info ul li {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 10px;
+      list-style:square;
+    }
+
+    .product-info p {
+      font-size: 18px;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    .product-info span {
+      font-size: 24px;
+      color: #008CBA;
+      font-weight: bold;
+    }
+
+    .size-selection {
+      margin-top: 20px;
+    }
+
+    .size-selection label {
+      font-size: 16px;
+      margin-right: 20px;
+    }
+
+    .order-button {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #008CBA;
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .order-button:hover {
+      background-color: #006f8e;
+    }
+    .o{
+      color: #008CBA;
+      
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    Fashion Chingu - Product Details
+  </header>
+
+  <div class="container">
+    <!-- Product Image Section -->
+    <div class="product">
+      <!-- Navigation Arrows -->
+      <button class="arrow arrow-left" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="arrow arrow-right" onclick="moveSlide(1)">&#10095;</button>
+
+      <img src="f1.jpg" alt="Product Image 1">
+      <img src="f2.jpg" alt="Product Image 2">
+      <img src="f3.jpg" alt="Product Image 3">
+      <img src="f4.jpg" alt="Product Image 4">
+      <!-- Add as many images as needed -->
+    </div>
+
+    <!-- Product Info Section -->
+    <div class="product-info">
+      <h1 id="product-name">Red Faux Leather Trench Coat | Lisa – BlackPink </h1>
+
+      
+
+      <p id="product-description">Red Faux Leather Trench Coat | Lisa – BlackPink</p>
+      <h1>select your size</h1>
+      <div class="size-selection">
+        <label for="small">Small</label>
+        <input type="radio" id="small" name="size" value="small">
+        <label for="medium">Medium</label>
+        <input type="radio" id="medium" name="size" value="medium">
+        <label for="large">Large</label>
+        <input type="radio" id="large" name="size" value="large">
+      </div>
+      <span id="product-price">₹8,500.93</span>
+
+      <!-- Size Selection Section -->
+      
+
+      <a href="order.html" class="order-button">Order Now</a>
+    </div>
+  </div>
+
+  <script>
+    let currentIndex = 0;
+
+    const images = document.querySelectorAll('.product img');
+    
+    // Function to move the slider
+    function moveSlide(direction) {
+      currentIndex += direction;
+
+      // Ensure that the index stays within bounds (looping the images)
+      if (currentIndex >= images.length) {
+        currentIndex = 0;
+      } else if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+      }
+
+      // Move the images
+      updateImages();
+    }
+
+    // Update the images to show the current one
+    function updateImages() {
+      images.forEach((image, index) => {
+        if (index === currentIndex) {
+          image.style.display = 'block';  // Show the current image
+        } else {
+          image.style.display = 'none';  // Hide other images
+        }
+      });
+    }
+
+    // Initialize by showing the first image
+    updateImages();
+  </script>
+
+</body>
+</html>

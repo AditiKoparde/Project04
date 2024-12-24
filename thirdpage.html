@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Chingu - Product Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+
+    /* Container */
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    /* Product Item */
+    .product-item {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+      text-align: center;
+      position: relative;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .product-item:hover {
+      transform: scale(1.05);
+    }
+
+    .product-item img {
+      width: 100%;
+      height: 300px; /* Ensures images are displayed in normal size */
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product-item h3 {
+      font-size: 18px;
+      color: #333;
+      margin-top: 15px;
+    }
+
+    .product-item p {
+      font-size: 16px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    .product-item span {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    ADHIKA FASHION - Shop the Latest Trends
+  </header>
+
+  <div class="container">
+    <div class="product-grid">
+      <!-- Product Items -->
+      <!-- Example of Product 1 to 20 -->
+      <div class="product-item" onclick="window.location.href='d1.html?product=Product 1&price=49.99&image=product1.jpg'">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>White Long Sleeves Textured Shirt | Joy – Red Velvet</h3>
+        <span>$49.99</span>
+      </div>
+
+      <div class="product-item" onclick="window.location.href='d2.html?product=Product 2&price=29.99&image=product2.jpg'">
+        <img src="b1.jpg" alt="Product 2">
+        <h3>White Vintage Ruffled Blouse | Jeongin – Stray Kids</h3>
+        
+        <span>$29.99</span>
+      </div>
+
+      <div class="product-item" onclick="window.location.href='d3.html?product=Product 3&price=59.99&image=product3.jpg'">
+        <img src="c1.jpg" alt="Product 3">
+        <h3>Black Classic Collared Faux Leather Jacket | Jihyo – Twice</h3>
+        <span>$59.99</span>
+      </div>
+
+      <div class="product-item" onclick="window.location.href='d4.html?product=Product 4&price=129.99&image=product4.jpg'">
+        <img src="d1 (1).jpg" alt="Product 4">
+        <h3>Beige Leopard Pattern Jeans | Jennie – BlackPink</h3>
+        
+        <span>$129.99</span>
+      </div>
+
+      <div class="product-item" onclick="window.location.href='d5.html?product=Product 5&price=159.99&image=product5.jpg'">
+        <img src="e1.jpg" alt="Product 5">
+        <h3>White Floral Print Cardigan | Lisa – BlackPink</h3>
+        <span>$159.99</span>
+      </div>
+
+      <div class="product-item" onclick="window.location.href='d6.html?product=Product 6&price=99.99&image=product6.jpg'">
+        <img src="f1.jpg" alt="Product 6">
+        <h3>Red Faux Leather Trench Coat | Lisa – BlackPink</h3>
+        
+        <span>$99.99</span>
+      </div>
+
+      <div class="product-item" onclick="window.location.href='d7.html?product=Product 7&price=89.99&image=product7.jpg'">
+        <img src="g1.jpg" alt="Product 7">
+        <h3>White Net Long Sleeves Top | Taehyung – BTS</h3>
+    
+        <span>$89.99</span>
+      </div>
+
+      <div class="product-item" onclick="window.location.href='d8.html?product=Product 8&price=119.99&image=product8.jpg'">
+        <img src="h1.jpg" alt="Product 8">
+        <h3>Casual Denim  blue shirt</h3>
+      
+        <span>$119.99</span>
+      </div>
+
+      <div class="product-item" onclick="window.location.href='d9.html?product=Product 9&price=49.99&image=product9.jpg'">
+        <img src="i1.jpg" alt="Product 9">
+        <h3>black Hoodie</h3>
+      
+        <span>$49.99</span>
+      </div>
+
+      <div class="product-item" onclick="window.location.href='d10.html?product=Product 10&price=79.99&image=product10.jpg'">
+        <img src="j1.jpg" alt="Product 10">
+        <h3>Grey Ribbed Half-Zipped Sweater | Ni-Ki – Enhypen</h3>
+        <p>Warm and stylish scarf</p>
+        <span>$79.99</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

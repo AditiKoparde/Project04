@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Chingu - Product Gallery</title>
+  <style>
+    /* Basic styles for body and header */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .product-item {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+      text-align: center;
+      position: relative;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .product-item:hover {
+      transform: scale(1.05);
+    }
+    .product-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .product-item h3 {
+      font-size: 18px;
+      color: #333;
+      margin-top: 15px;
+    }
+    .product-item p {
+      font-size: 16px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+    .product-item span {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Fashion Chingu - Shop the Latest Trends
+  </header>
+
+  <div class="container">
+    <div class="product-grid">
+      <!-- Product Item 1 -->
+      <div class="product-item" onclick="window.location.href='product-details.html?product'">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>Stylish and comfortable dress</p>
+        <span>$49.99</span>
+      </div>
+
+      <!-- Product Item 2 -->
+      <div class="product-item" onclick="window.location.href='product-details.html?product=Product 2&price=29.99&image=product2.jpg'">
+        <img src="images/product2.jpg" alt="Product 2">
+        <h3>Product 2</h3>
+        <p>Casual and breathable T-shirt</p>
+        <span>$29.99</span>
+      </div>
+
+      <!-- Product Item 3 -->
+      <div class="product-item" onclick="window.location.href='product-details.html?product=Product 3&price=59.99&image=product3.jpg'">
+        <img src="images/product3.jpg" alt="Product 3">
+        <h3>Product 3</h3>
+        <p>Durable and trendy jeans</p>
+        <span>$59.99</span>
+      </div>
+
+      <!-- Product Item 4 -->
+      <div class="product-item" onclick="window.location.href='product-details.html?product=Product 4&price=129.99&image=product4.jpg'">
+        <img src="images/product4.jpg" alt="Product 4">
+        <h3>Product 4</h3>
+        <p>Premium leather jacket</p>
+        <span>$129.99</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
